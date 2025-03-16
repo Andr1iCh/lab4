@@ -54,6 +54,7 @@ Array& Array::operator=(const Array& RArray)
 Array Array::operator+(const Array& right)const
 {
     Array newArray(m_size + right.m_size, 1);
+    newArray.m_currentIndex = (right.m_currentIndex + m_currentIndex + 1);
     for (int i = 0; i <= m_currentIndex; i++)
     {
         newArray.m_pArr[i] = m_pArr[i];

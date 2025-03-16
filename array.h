@@ -1,6 +1,6 @@
 #ifndef ARRAY_H
 #define ARRAY_H
-
+#include<iostream>
 class Array {
 	int m_size;
 	int m_incrStep;
