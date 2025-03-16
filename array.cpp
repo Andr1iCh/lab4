@@ -49,6 +49,7 @@ Array& Array::operator=(const Array& RArray)
     {
         m_pArr[i] = RArray.m_pArr[i];
     }
+    return *this;
 }
 
 Array Array::operator+(const Array& right)const
