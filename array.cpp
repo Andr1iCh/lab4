@@ -84,33 +84,20 @@ Array Array::operator-(int val)const
     }
     return newArray;
 }
-bool Array::operator==(const Array& right)const
+bool Array::operator==(const Array& right) const
 {
-    int difference{ 0 };
+    if (m_currentIndex != right.m_currentIndex)
+        return false;
     for (int i = 0; i <= m_currentIndex; ++i)
     {
-        for (int k = 0; k <= right.m_currentIndex; k++)
-        {
-            if (m_pArr[i] != right.m_pArr[k])
-                ++difference;
-        }
-
+        if (m_pArr[i] != right.m_pArr[i])
+            return false;
     }
-    return !difference;      
+    return true;
 }
-bool Array::operator!=(const Array& right)const
+bool Array::operator!=(const Array& right) const
 {
-    int difference{ 0 };
-    for (int i = 0; i <= m_currentIndex; ++i)
-    {
-        for (int k = 0; k <= right.m_currentIndex; k++)
-        {
-            if (m_pArr[i] != right.m_pArr[k])
-                ++difference;
-        }
-
-    }
-    return difference;
+    return !(*this == right);
 }
 Array Array::operator++(int)
 {
