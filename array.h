@@ -23,7 +23,7 @@ public:
 	Array operator-(int)const;
 	bool  operator==(const Array&)const;
 	bool  operator!=(const Array&)const;
-	Array operator++();
+	Array operator++(int);
 	Array& operator+=(int val);
 	int& operator[](int );
 	

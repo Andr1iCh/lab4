@@ -112,7 +112,7 @@ bool Array::operator!=(const Array& right)const
     }
     return difference;
 }
-Array Array::operator++()
+Array Array::operator++(int)
 {
     Array tempArray = *this;
     for (int i = 0; i <= m_currentIndex; ++i)
